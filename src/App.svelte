@@ -52,7 +52,7 @@
 
 <main>
   <div class="header">
-    <img src="/images/music.png" width="300" height="300" alt="play" />
+    <!-- <img src="/images/music.png" width="300" height="300" alt="play" /> -->
     <h3 class="headline">
       <b>Gustos Musicales</b>
       Frecuencia, Género Musical, Artista y Likes
@@ -76,11 +76,11 @@
           </div>
           <div class="vinilo-overlay" style="opacity: {usuario.opacidad}"></div>
         </div>
-        <p class="artista">
+        <a href={usuario.Link} target="_blank" rel="noopener noreferrer" p class="artista">
           <b>{usuario.ArtistaBanda}</b>
           <br />
           <span style="font-weight: lighter">{usuario.Nombre}</span>
-        </p>
+        </a>
       </div>
     {/each}
   </div>
