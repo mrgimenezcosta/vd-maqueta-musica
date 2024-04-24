@@ -51,8 +51,9 @@
 </script>
 
 <main>
+  
   <div class="header">
-    <!-- <img src="/images/music.png" width="300" height="300" alt="play" /> -->
+    <img src="/images/play.gif" width="50" height="50" alt="play" />
     <h3 class="headline">
       <b>Gustos Musicales</b>
       Frecuencia, Género Musical, Artista y Likes
@@ -64,7 +65,6 @@
   <div class="container">
     {#each usuarios as usuario}
       <div class="person-container">
-        <!-- <div class="vinilo-overlay"></div> -->
         <div class="corazones">
           <img src={`images/cora_${usuario.Cant_corazones}.png`} alt="Corazón" class="corazon" style="z-index: {8 - usuario.Cant_corazones}" /> </div>
         <div class="vinilo">
@@ -83,35 +83,12 @@
         </a>
       </div>
     {/each}
+  </div> 
+
+  <div class="referencias">
+    <p>Referencias</p>
+    <img src={`images/referencias.svg`} width="1000" alt="referencias"/>
   </div>
-
-
-  <footer>
-
-    <div class="referencias">
-      <p>Referencias</p>
-      <img src={`images/referencias.svg`} width="1000" alt="referencias"/>
-    </div>
-    <div class = "contacto">
-    <br />María Giménez Costa
-    <ul class="social-icons">
-      <li><a href="https://www.linkedin.com/in/maria-gimenez-costa-9b0519246/"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://www.instagram.com/tu-usuario"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="mailto:gimenezcostamaria@gmail.com"><i class="fas fa-envelope"></i></a></li>
-    </ul>
-    <br />Tadeo Yapoudjian
-    <ul class="social-icons">
-      <li><a href="https://www.linkedin.com/in/maria-gimenez-costa-9b0519246/"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://www.instagram.com/tu-usuario"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="mailto:gimenezcostamaria@gmail.com"><i class="fas fa-envelope"></i></a></li>
-    </ul>
-    <br />Copyright 2024©
-    <br />
-    Recolección de datos:<a href="https://docs.google.com/spreadsheets/d/1HaOY1dzfnVjWPHivhMw8vknvDpwZXSE0fda5vz6nK4U/edit#gid=0">link</a>
-  </div>
-  </footer>
-  
-  
 
 </main>
 
@@ -208,25 +185,6 @@
     
   }
 
-  footer {
-  margin-top: 50px;
-  font-style: italic;
-
-}
-
-.contacto {
-  margin-top: 100px;
-  font-style: italic;
-  display: flex;
-  flex-direction: column; /* Cambia la dirección del contenedor a columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  text-align: center; /* Centra el texto */
-  width: 100%;
-  background-color: #D9D9D9;
-  padding: 40px 0;
-  box-sizing: border-box;
-}
-
   .referencias{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -293,25 +251,6 @@
   z-index: 5; /* Colócalo encima de los otros elementos */
 }
 
-  .social-icons {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-}
-
-.social-icons li {
-  margin-right: 10px;
-}
-
-.social-icons li:last-child {
-  margin-right: 0;
-}
-
-.social-icons a {
-  color: #333;
-  text-decoration: none;
-  font-size: 24px;
-}
 
 /* Estilos adicionales según sea necesario */
 
