@@ -1,5 +1,5 @@
+
 <script>
-  
   import * as d3 from "d3"
   import { onMount } from "svelte"
 
@@ -22,6 +22,17 @@
   let colorGeneromasOscuro = d3.scaleOrdinal()
     .domain(["Rock", "Pop", "Tecno", "Folk", "Jazz", "Rap", "R&B", "Indie", "Urban", "Multivariado", "Pop,Rock", "R&B,Pop", "Rap,Jazz,Tecno"])
     .range(["gradient-rock-o", "gradient-pop-o", "gradient-tecno-o", "gradient-folk-o", "gradient-jazz-o", "gradient-rap-o", "gradient-rb-o", "gradient-indie-o", "gradient-urban-o", "gradient-multivariado-o", "gradient-poprock-o", "gradient-rbpop-o", "gradient-rapjazztecno-o"])
+
+
+    function calcularDuracion(frecuencia) {
+    if (frecuencia === "Bajo") {
+      return 10; // Duración más larga para frecuencia baja
+    } else if (frecuencia === "Medio") {
+      return 3; // Duración intermedia para frecuencia media
+    } else {
+      return 1; // Duración más corta para frecuencia alta
+    }
+  }
 
     onMount(() => {
     d3.csv("./data/UsodeMusica.csv", d3.autoType).then(data => {
@@ -57,7 +68,7 @@
         <div class="corazones">
           <img src={`images/cora_${usuario.Cant_corazones}.png`} alt="Corazón" class="corazon" style="z-index: {8 - usuario.Cant_corazones}" /> </div>
         <div class="vinilo">
-          <div class="girar {colorGenero(usuario.Genero)}">
+          <div class="girar {colorGenero(usuario.Genero)}" style="animation-duration: {calcularDuracion(usuario.Frecuencia)}s">
             <div class="semicirculo {colorGeneromasOscuro(usuario.Genero)}"></div>
             <div class="intensidad" style="background-color: {colorIntensidad(usuario.Frecuencia)}"></div> 
             <div class="semicirculointensidad" style="background-color: {colorIntensidadmasOscuro(usuario.Frecuencia)}"></div>
@@ -406,7 +417,7 @@
     background-image: linear-gradient(to bottom, #399CA2, #D94382);
   }
 
-  .gradient-rapjazztecnoo {
+  .gradient-rapjazztecno-o {
     background-image: linear-gradient(to bottom, #A12F9D, #724AB4, #6266CB);
   }
 
