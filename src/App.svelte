@@ -87,7 +87,7 @@
 
   <div class="referencias">
     <p>Referencias</p>
-    <img src={`images/referencias.svg`} width="1000" alt="referencias"/>
+    <img src={`images/Referencias.svg`} width="1000" alt="referencias"/>
   </div>
 
 </main>
