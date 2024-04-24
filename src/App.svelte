@@ -130,6 +130,7 @@
   }
 
   .bajada {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: normal;
     text-align: center;
