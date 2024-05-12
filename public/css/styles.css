@@ -2,7 +2,7 @@
 
 footer {
   margin-top: 50px;
-  font-style: italic;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .contacto {

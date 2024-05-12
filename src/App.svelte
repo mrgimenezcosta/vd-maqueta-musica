@@ -85,9 +85,9 @@
     {/each}
   </div> 
 
-  <div class="referencias">
-    <p>Referencias</p>
-    <img src={`images/Referencias.svg`} width="1000" alt="referencias"/>
+  <div class="referencias" style="font-weight: bold;">
+    <p>Referencias </p>
+    <img src={`images/referencias.png`} width="1000" alt="referencias"/>
   </div>
 
 </main>
@@ -135,6 +135,7 @@
     font-weight: normal;
     text-align: center;
     margin: 20px;
+    margin-bottom: 50px;
   }
 
   .headline b {
@@ -189,7 +190,7 @@
   .referencias{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: bold;
   display: flex;
@@ -197,6 +198,7 @@
   align-items: center;
   flex-direction: column;
   right: 75%;
+  margin-top: 50px;
   }
   /* Estilos para la imagen SVG */
 
