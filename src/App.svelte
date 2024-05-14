@@ -78,7 +78,7 @@
         <a href={usuario.Link} target="_blank" rel="noopener noreferrer" p class="artista">
           <b>{usuario.ArtistaBanda}</b>
           <br />
-          <span style="font-weight: lighter">{usuario.Nombre}</span>
+          <span style="font-weight: light">{usuario.Nombre}</span>
         </a>
       </div>
     {/each}
@@ -124,6 +124,7 @@
   }
 
   .artista {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     text-align: center; /* Alinea el texto al centro */
     margin-top: 0px; /* Añade un espacio superior para separarlo del vinilo */
   }
