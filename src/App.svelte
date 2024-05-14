@@ -86,7 +86,7 @@
 
   <div class="referencias" style="font-weight: bold;">
     <p>Referencias </p>
-    <img src={`images/referencias.png`} width="1000" alt="referencias"/>
+    <img src={`images/referencias.svg`} width="1000" alt="referencias"/>
   </div>
 
 </main>
