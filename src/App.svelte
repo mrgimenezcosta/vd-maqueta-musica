@@ -127,6 +127,8 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     text-align: center; /* Alinea el texto al centro */
     margin-top: 0px; /* Añade un espacio superior para separarlo del vinilo */
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Cambia el color del texto a negro */
   }
 
   .bajada {
